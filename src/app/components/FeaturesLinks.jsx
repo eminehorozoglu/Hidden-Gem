@@ -13,26 +13,64 @@ import {
   Search,
 } from "lucide-react";
 
-// Navigation Links Data
 const navLinks = [
-  { label: "Food & Drinks", href: "/foods", icon: <Utensils size={40} /> },
-  { label: "Hotels", href: "/hotels", icon: <Hotel size={40} /> },
-  { label: "Arts", href: "/arts", icon: <Palette size={40} /> },
-  { label: "Services", href: "/services", icon: <Briefcase size={40} /> },
-  { label: "Parks", href: "/parks", icon: <TreePalm size={40} /> },
-  { label: "Events", href: "/events", icon: <Calendar size={40} /> },
-  { label: "Retails", href: "/retails", icon: <ShoppingBag size={40} /> },
-  { label: "Education", href: "/education", icon: <GraduationCap size={40} /> }, // Education Added
+  {
+    label: "Food & Drinks",
+    href: "/foods",
+    icon: <Utensils size={40} />,
+    gradient: "from-orange-100 to-orange-500",
+  },
+  {
+    label: "Hotels",
+    href: "/hotels",
+    icon: <Hotel size={40} />,
+    gradient: "from-indigo-100 to-indigo-500",
+  },
+  {
+    label: "Arts",
+    href: "/arts",
+    icon: <Palette size={40} />,
+    gradient: "from-purple-100 to-pink-500",
+  },
+  {
+    label: "Services",
+    href: "/services",
+    icon: <Briefcase size={40} />,
+    gradient: "from-green-100 to-teal-500",
+  },
+  {
+    label: "Parks",
+    href: "/parks",
+    icon: <TreePalm size={40} />,
+    gradient: "from-green-100 to-green-600",
+  },
+  {
+    label: "Events",
+    href: "/events",
+    icon: <Calendar size={40} />,
+    gradient: "from-orange-100 to-yellow-500",
+  },
+  {
+    label: "Retails",
+    href: "/retails",
+    icon: <ShoppingBag size={40} />,
+    gradient: "from-green-100 to-green-800",
+  },
+  {
+    label: "Education",
+    href: "/education",
+    icon: <GraduationCap size={40} />,
+    gradient: "from-red-100 to-red-500",
+  },
 ];
 
-// Category Card Component
 const CategoryCard = ({ link }) => (
   <Link
     href={link.href}
-    className="flex flex-col items-center justify-center h-[180px] w-[220px] text-center 
-               text-gray-700 bg-white border border-gray-300 rounded-xl shadow-md font-semibold 
-               hover:bg-blue-500 hover:text-white transition-all duration-300 
-               transform hover:scale-105"
+    className={`flex flex-col items-center justify-center h-[180px] w-[220px] text-center 
+               text-white border border-gray-300 rounded-xl shadow-md font-semibold 
+               transition-all duration-300 transform hover:scale-105 hover:shadow-lg 
+               bg-gradient-to-r ${link.gradient} hover:brightness-110`}
   >
     {link.icon}
     <span className="mt-3 text-lg">{link.label}</span>
@@ -48,7 +86,7 @@ export default function HomePage() {
   );
 
   return (
-    <div className="min-h-screen w-full bg-gray-100 flex flex-col items-center">
+    <div className=" w-full bg-gray-100 flex flex-col items-center">
       {/* Search Bar */}
       <div className="w-full max-w-lg mt-8">
         <div className="relative">
