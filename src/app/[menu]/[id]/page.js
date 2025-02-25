@@ -29,7 +29,7 @@ JOIN menu ON menu.id = business.menu_id WHERE business.id = $1 `, [
 }
 
      return(
-<>
+<div className="flex flex-col items-center gap-4 w-full bg-slate-300">
 {
   wrangleData.map((data)=><div key={data.id}>
     <img src={data.business_picture} alt="Business" width={250}></img>
@@ -37,7 +37,7 @@ JOIN menu ON menu.id = business.menu_id WHERE business.id = $1 `, [
    <p>{data.business_address}</p>
   </div>)
 }
-<form action={handleSubmit} >
+<form action={handleSubmit} className="flex flex-col items-center gap-4" >
             <label htmlFor="date">Date:</label>
             <input type="date" name="date" id="date" className="text-amber-800  bg-amber-300" />
             <label htmlFor="username">User Name:</label>
@@ -49,6 +49,6 @@ JOIN menu ON menu.id = business.menu_id WHERE business.id = $1 `, [
 
 <p>Location</p>
 <Link href={`/reviews/${BusinessParams.id}`}>Reviews</Link>
-</>
+</div>
      )
     }

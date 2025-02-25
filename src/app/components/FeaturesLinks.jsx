@@ -15,7 +15,7 @@ import {
 
 // Navigation Links Data
 const navLinks = [
-  { label: "Food & Drinks", href: "/food", icon: <Utensils size={40} /> },
+  { label: "Food & Drinks", href: "/foods", icon: <Utensils size={40} /> },
   { label: "Hotels", href: "/hotels", icon: <Hotel size={40} /> },
   { label: "Arts", href: "/arts", icon: <Palette size={40} /> },
   { label: "Services", href: "/services", icon: <Briefcase size={40} /> },
