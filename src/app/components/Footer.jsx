@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const footerLinks = [
   { label: "Home", href: "/", icon: <Home size={40} /> },
-  { label: "Add", href: "/add", icon: <CirclePlus size={40} /> },
+  { label: "Add", href: "/ContributeForm", icon: <CirclePlus size={40} /> },
   { label: "Profile", href: "/profile", icon: <CircleUser size={40} /> },
 ];
 
