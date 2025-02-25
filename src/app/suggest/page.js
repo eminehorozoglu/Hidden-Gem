@@ -22,13 +22,13 @@ export default function suggestPage(){
  
       <form action={handleSubmit} className="flex flex-col items-center gap-4" >
             <label htmlFor="business_name">Name of Business:</label>
-            <input type="text" name="business_name" id="business_name" className="text-amber-800  bg-amber-300" />
+            <input type="text" name="business_name" id="business_name" className="text-amber-800  bg-amber-300" required/>
             <label htmlFor="business_type">Business Type:</label>
-            <input type="business_type" name="business_type" id="business_type" className="text-amber-800  bg-amber-300" />
+            <input type="business_type" name="business_type" id="business_type" className="text-amber-800  bg-amber-300" required/>
             <label htmlFor="location">Location: </label>
-            <textarea id="location" name="location" className="text-amber-800  bg-amber-300"rows="2" cols="40   " />
+            <textarea id="location" name="location" className="text-amber-800  bg-amber-300"rows="2" cols="40   " required />
             <label htmlFor="reason" >Reason for Suggestion:</label>
-            <textarea id="reason" name="reason" className="text-amber-800 rounded-xl bg-amber-300" rows="4" cols="40"/>
+            <textarea id="reason" name="reason" className="text-amber-800 rounded-xl bg-amber-300" rows="4" cols="40" required/>
             <button type="submit" className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-full">Submit data</button>
         </form>
 

@@ -119,22 +119,7 @@ export default function HomePage() {
         )}
       </div>
 
-      {/* Call to Action */}
-      <div className="w-full text-center mt-16 mb-10">
-        <h3 className="text-2xl font-semibold text-gray-800">
-          Want to contribute?
-        </h3>
-        <p className="text-gray-600 mt-2">
-          Help us improve this project and add more hidden gems.
-        </p>
-        <Link
-          href="/ContributeForm"
-          className="mt-4 inline-block bg-gradient-to-r from-gray-100 via-gray-500 to-gray-200 text-white px-6 py-3 rounded-lg font-semibold 
-                    shadow-lg hover:bg-blue-800 hover:brightness-110  transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-        >
-          Contribute
-        </Link>
-      </div>
+      
     </div>
   );
 }
