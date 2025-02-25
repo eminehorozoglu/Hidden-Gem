@@ -3,9 +3,11 @@ import { Home, CirclePlus, CircleUser } from "lucide-react";
 import Link from "next/link";
 
 const footerLinks = [
-  { label: "Home", href: "/", icon: <Home size={30} /> },
-  { label: "Add", href: "/add", icon: <CirclePlus size={30} /> },
-  { label: "Profile", href: "/profile", icon: <CircleUser size={30} /> },
+
+  { label: "Home", href: "/", icon: <Home size={40} /> },
+  { label: "Add", href: "/ContributeForm", icon: <CirclePlus size={40} /> },
+  { label: "Profile", href: "/profile", icon: <CircleUser size={40} /> },
+
 ];
 
 const FooterCard = ({ link }) => (
