@@ -2,22 +2,23 @@ import { db } from "@/utils/dbConnection";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import Choise from "@/Components/Choise";
+import Choise from "@/app/components/Choise";
 
 export default async function BusinessPage({ params }) {
-
+const mapsKey = process.env.MAPS_API_KEY;
     const BusinessParams = await params;
-    const businessdata = await db.query(`SELECT business.id, business.business_name, business.business_address, business.business_picture, business.business_type, business.menu_id FROM business
+    const businessdata = await db.query(`SELECT business.id, business.business_name, business.business_address, business.business_picture, business.business_type,business.place_id, business.menu_id FROM business
 JOIN menu ON menu.id = business.menu_id WHERE business.id = $1 `, [
     BusinessParams.id,
     ]);
+    console.log(businessdata);
     const wrangleData = businessdata.rows;
   
-    const commentdata = await db.query(`SELECT reviews.id, reviews.date, reviews.username, reviews.comment,reviews.business_id FROM reviews
+    const commentdata = await db.query(`SELECT reviews.id, reviews.date, reviews.username, reviews.comment,reviews.business_id,business.business_address FROM reviews  
       JOIN business on business.id = reviews.business_id WHERE business.id = $1 order by reviews.date desc `, [
         BusinessParams.id,
           ]); 
-          console.log(commentdata);
+    
 
     async function handleSubmit(formValues) {
         "use server";
@@ -50,7 +51,7 @@ JOIN menu ON menu.id = business.menu_id WHERE business.id = $1 `, [
             <textarea id="comment" name="comment" className="text-amber-800 rounded-xl bg-amber-300" rows="4" cols="40"/>
             <button type="submit" className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-full">Submit data</button>
         </form>
-<Choise commentdata = {commentdata.rows}/>
+<Choise commentdata = {commentdata.rows} mapsKey = {mapsKey} placeId = {wrangleData[0].place_id} />
 </div>
      )
     }
