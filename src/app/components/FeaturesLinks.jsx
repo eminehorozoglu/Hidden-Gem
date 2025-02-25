@@ -86,7 +86,7 @@ export default function HomePage() {
   );
 
   return (
-    <div className=" w-full bg-gray-100 flex flex-col items-center">
+    <div className=" w-full bg-white flex flex-col items-center">
       {/* Search Bar */}
       <div className="w-full max-w-lg mt-8">
         <div className="relative">
@@ -129,8 +129,8 @@ export default function HomePage() {
         </p>
         <Link
           href="/ContributeForm"
-          className="mt-4 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold 
-                    shadow-lg hover:bg-blue-700 transition"
+          className="mt-4 inline-block bg-gradient-to-r from-gray-100 via-gray-500 to-gray-200 text-white px-6 py-3 rounded-lg font-semibold 
+                    shadow-lg hover:bg-blue-800 hover:brightness-110  transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
         >
           Contribute
         </Link>
