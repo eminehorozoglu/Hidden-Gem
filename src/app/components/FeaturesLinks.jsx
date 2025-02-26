@@ -12,6 +12,7 @@ import {
   GraduationCap,
   Search,
 } from "lucide-react";
+import SearchBar from "../components/SearchBar"; // Import SearchBar component
 
 const navLinks = [
   {
@@ -87,20 +88,8 @@ export default function HomePage() {
 
   return (
     <div className=" w-full bg-white flex flex-col items-center">
-      {/* Search Bar */}
-      <div className="w-full max-w-lg mt-8">
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Search categories..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full p-3 pl-10 text-lg border rounded-lg shadow-sm focus:outline-none 
-                       focus:ring-2 focus:ring-blue-500"
-          />
-          <Search className="absolute left-3 top-3 text-gray-400" size={24} />
-        </div>
-      </div>
+      {/* Use the SearchBar component */}
+      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
       {/* Category Grid */}
       <div className="w-full max-w-6xl bg-white shadow-lg rounded-lg p-10 mt-6">
@@ -118,8 +107,6 @@ export default function HomePage() {
           <p className="text-center text-gray-600 mt-6">No categories found.</p>
         )}
       </div>
-
-      
     </div>
   );
 }
