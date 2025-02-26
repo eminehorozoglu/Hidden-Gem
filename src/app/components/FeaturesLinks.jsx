@@ -12,7 +12,7 @@ import {
   GraduationCap,
   Search,
 } from "lucide-react";
-import SearchBar from "../components/SearchBar"; // Import SearchBar component
+import SearchBar from "../components/SearchBar";
 
 const navLinks = [
   {
@@ -68,7 +68,7 @@ const navLinks = [
 const CategoryCard = ({ link }) => (
   <Link
     href={link.href}
-    className={`flex flex-col items-center justify-center h-[180px] w-[220px] text-center 
+    className={`flex flex-col items-center justify-center h-[120px] w-[100px] sm:h-[180px] sm:w-[220px] text-center 
                text-white border border-gray-300 rounded-xl shadow-md font-semibold 
                transition-all duration-300 transform hover:scale-105 hover:shadow-lg 
                bg-gradient-to-r ${link.gradient} hover:brightness-110`}
@@ -88,10 +88,8 @@ export default function HomePage() {
 
   return (
     <div className=" w-full bg-white flex flex-col items-center">
-      {/* Use the SearchBar component */}
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
-      {/* Category Grid */}
       <div className="w-full max-w-6xl bg-white shadow-lg rounded-lg p-10 mt-6">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
           Explore by Category

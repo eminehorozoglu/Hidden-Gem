@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export default function Register() {
-  const [showForm, setShowForm] = useState(false); // State to toggle form visibility
+  const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -31,7 +31,7 @@ export default function Register() {
   return (
     <div className="flex items-center justify-center min-h-screen p-6">
       {!showForm ? (
-        // Register Button - Shows the form when clicked
+        // Register Button
         <button
           className="flex items-center justify-center w-[180px] h-[60px] m-8 border-2 border-gray-400 rounded-lg 
                      transition-all duration-300 ease-in-out transform hover:shadow-lg hover:bg-blue-500 hover:text-white"
@@ -45,7 +45,6 @@ export default function Register() {
           <h2 className="text-2xl font-bold text-center mb-4">Register</h2>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Name Input */}
             <div>
               <label className="block text-gray-700">Full Name</label>
               <input
@@ -58,7 +57,6 @@ export default function Register() {
               />
             </div>
 
-            {/* Email Input */}
             <div>
               <label className="block text-gray-700">Email</label>
               <input
@@ -71,7 +69,6 @@ export default function Register() {
               />
             </div>
 
-            {/* Password Input */}
             <div>
               <label className="block text-gray-700">Password</label>
               <input
@@ -84,7 +81,6 @@ export default function Register() {
               />
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               className="w-full p-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition"
@@ -93,7 +89,6 @@ export default function Register() {
             </button>
           </form>
 
-          {/* Cancel Button */}
           <button
             className="mt-4 w-full p-2 border border-gray-400 rounded-lg text-gray-600 hover:bg-gray-100 transition"
             onClick={() => setShowForm(false)}
