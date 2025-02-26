@@ -3,11 +3,9 @@ import { Home, CirclePlus, CircleUser } from "lucide-react";
 import Link from "next/link";
 
 const footerLinks = [
-
   { label: "Home", href: "/", icon: <Home size={40} /> },
   { label: "Add", href: "/ContributeForm", icon: <CirclePlus size={40} /> },
   { label: "Profile", href: "/profile", icon: <CircleUser size={40} /> },
-
 ];
 
 const FooterCard = ({ link }) => (
@@ -23,11 +21,7 @@ const FooterCard = ({ link }) => (
 
 export default function Footer() {
   return (
-    <div
-      className="fixed bottom-0 left-0 w-full bg-gray-100;
-
-                     shadow-2xl"
-    >
+    <div className="fixed bottom-0 left-0 w-full bg-gray-100 shadow-2xl">
       <div className="flex justify-around items-center max-w-lg mx-auto">
         {footerLinks.map((link) => (
           <FooterCard link={link} key={link.label} />

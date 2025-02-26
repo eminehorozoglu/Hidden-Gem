@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       {/* <h1>Hidden Gems!</h1> */}
       {/* <Register /> */}
-      <div className="m-3 w-full">
+      <div className="w-full">
         <FeaturesLinks />
       </div>
     </div>

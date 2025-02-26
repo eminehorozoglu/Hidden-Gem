@@ -32,11 +32,10 @@ export default function Choise({ commentdata, mapsKey, placeId, businessId }) {
           </button>
         </Link>
       </div>
-      <div>
+      <div className="flex flex-col items-center justify-center">
         {show === 0 && (
           <iframe
-            width="600"
-            height="450"
+            className="h-[300px] w-[250px] sm:h-[600px] sm:w-full"
             loading="lazy"
             src={`https://www.google.com/maps/embed/v1/place?q=place_id:${placeId}&key=${mapsKey}`}
           ></iframe>

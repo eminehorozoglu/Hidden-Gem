@@ -9,7 +9,6 @@ export default function Hero() {
         <div className="absolute rounded-full w-[40vw] h-[40vw] bg-circleRadial animate-pulse opacity-10"></div>
       </div>
 
-      {/* Main content */}
       <div className="relative z-10 text-center px-4 sm:px-8 md:px-12">
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-tight mb-4 text-shadow-lg">
           Hidden Gems

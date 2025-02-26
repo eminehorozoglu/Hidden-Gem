@@ -24,7 +24,6 @@ export default async function MenuPage({ params }) {
         {menuparams}
       </h1>
 
-      {/* Search Bar Design */}
       <div className="w-full max-w-lg mt-8 mb-8 mx-auto">
         <div className="relative">
           <input
@@ -75,11 +74,11 @@ export default async function MenuPage({ params }) {
         <h2 className="text-left capitalize text-[40px] text-black font-bold">
           Local Gems
         </h2>
-        <div className="bg-white flex flex-row overflow-scroll">
+        <div className="bg-white flex flex-row gap-6 px-6 overflow-scroll">
           {wrangleData.length > 0 ? "" : "Sorry! There is no Gems to show"}
           {wrangleData.map((data) => (
             <div
-              className="flex flex-col items-center gap-4 m-6 p-6 bg-gray-100"
+              className="flex flex-col items-center gap-2 bg-gray-100"
               key={data.id}
             >
               <div className="w-[250px] h-[250px]">
